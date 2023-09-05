@@ -1,9 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900;1000&display=swap');
-
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Mulish', sans-serif;
+  font-family: "General Sans";
   box-sizing: border-box;
 }
 
@@ -57,14 +55,19 @@ nav {
   top: 0;
   height: 80px;
   z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   width: 100%;
   padding: 0 40px;
   color: #fff;
   margin: 0;
   background-color: black;
+}
+#navcont {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
 }
 #menu a {
   padding: 0 30px;
@@ -90,6 +93,17 @@ nav {
   font-size: 16px;
 }
 
+.smallmenu {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 0;
+  display: none;
+}
+.smallmenu img {
+  width: 100%;
+  height: 100%;
+}
 /* ------------- MAIN STARTS----------- */
 
 main {
@@ -142,8 +156,22 @@ main {
   font-size: 15px;
   text-align: right !important;
 }
+
+#chhotiheadings {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin-top: 5vh;
+  padding-right: 30px;
+}
+#chhotiheadings h5 {
+  text-transform: uppercase;
+  margin-top: 0.5vw;
+  font-size: 1vw;
+  text-align: right;
+}
 #herofooter {
-  padding: 0 2vw;
+  padding: 0 30px;
   width: 100%;
   position: absolute;
   bottom: 3%;
@@ -159,7 +187,7 @@ main {
   scroll-behavior: smooth;
 }
 
-/* ------------- PAGE 1 ENDS----------- */
+/* ------------- PAGE 1 ENDS PAGE-2 STARTS ----------- */
 
 #page2 {
   height: calc(100vh);
@@ -167,7 +195,7 @@ main {
   position: relative;
   color: #fff;
   padding: 80px 40px;
-  /* background-color: lightblue; */
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -182,18 +210,8 @@ main {
   padding: 3vw 3vw;
   padding-right: 0;
   border-top: 1px solid #888;
-  /* background-color: lightblue; */
 }
-/* .elemcontainer {
-  width: 100%;
-  height: 100%;
-  z-index: 9969;
-  margin: 0;
-  background-color: #888;
-  position: absolute;
-  top: 0;
-  right: 0;
-} */
+
 .elem h1 {
   text-transform: uppercase;
   font-size: 10vh;
@@ -270,20 +288,6 @@ main {
 
 /* ------------- PAGE 3 ENDS----------- */
 
-#chhotiheadings {
-  display: flex;
-  flex-direction: column;
-  align-items: end;
-  margin-top: 5vh;
-  padding-right: 30px;
-}
-#chhotiheadings h5 {
-  text-transform: uppercase;
-  margin-top: 0.5vw;
-  font-size: 1vw;
-  text-align: right;
-}
-
 #footer {
   color: #fff;
   background-color: black;
@@ -311,4 +315,105 @@ main {
   text-decoration: none;
 }
 
-/* ---------- SKILLS PAGE STARTS HERE -------- */
+/* ---------- SKILLS PAGE WILL START HERE -------- */
+
+/* ------------- MEDIA QUERIES STARTS HERE ---------- */
+@media only screen and (max-width: 500px) {
+  #minicircle {
+    display: none;
+  }
+  nav {
+    height: 80px;
+    font-size: 1.2rem;
+  }
+  #menu {
+    display: none;
+  }
+  .smallmenu {
+    display: inherit;
+  }
+  main {
+    width: 100vw;
+    overflow: hidden;
+  }
+  #page1 {
+    height: 100vh;
+  }
+  #page1 h5 {
+    font-size: 3vw;
+    font-weight: 400;
+  }
+  #heading {
+    margin-top: 0;
+  }
+  #heading h1 {
+    font-size: 14vw;
+    font-weight: 500;
+  }
+  #heading #secondh1 {
+    margin-left: 12vw;
+  }
+  #chhotiheadings h5 {
+    font-size: 3vw;
+    margin-top: 0.5vw;
+    font-weight: 400;
+  }
+  #chhotiheadings {
+    margin-top: 15vh;
+  }
+  #herofooter {
+    bottom: 10%;
+  }
+
+  #herofooter a {
+    font-size: 0.8rem;
+    font-weight: 300;
+  }
+  #page2 {
+    height: 50vh;
+    justify-content: center;
+  }
+  .elem img {
+    /* display: none; */
+  }
+  .elem h1 {
+    font-size: 10vw;
+    font-weight: 400;
+  }
+  .elem h5 {
+    font-size: 0.5rem;
+    font-weight: 300;
+  }
+  #page3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #about {
+    height: 100%;
+    gap: 50px;
+    flex-direction: column;
+  }
+  #about img {
+    width: 180px;
+  }
+
+  #textabout {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+  }
+
+  #textabout h5 {
+    margin-bottom: 30px;
+  }
+
+  #textabout p {
+    line-height: 1.5;
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+  }
+}
